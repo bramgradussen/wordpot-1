@@ -17,6 +17,10 @@ Wordpot is a Wordpress honeypot which detects probes for plugins, themes, timthu
 
 To configure the honeypot you can edit the config file `wordpot.conf` or provide arguments trough the command line interface as shown above.
 
+### Docker Usage
+
+    docker run -d --name wordpot -p 80:80 garland/wordpot:latest python /opt/wordport/wordpot.py --host=0.0.0.0 --port=80
+
 ## Theme support
 
 You can use a wordpress theme as you would in a normal Wordpress installation by putting the theme folder in the `static/wp-content/themes/` directory. You might also need to edit the html skeleton which is stored in the `templates/` folder and should be named as your theme (e.g. `themename.html`) - take a look at `twentyeleven.html` to see how it works. 
